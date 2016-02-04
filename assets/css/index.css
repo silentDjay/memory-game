@@ -1,0 +1,27 @@
+*{
+  border-style: solid;
+}
+
+body{
+  /*background-color: #3f51b5;*/
+}
+header {
+  margin-top: 2.3em;
+  margin-left: 2.3em;
+  margin-right: 2.3em;
+}
+h2 {
+  margin-top: 2em;
+}
+.time {
+  margin-left: 50em;
+  font-family: Arial, sans-serif;
+}
+.hearts {
+  display: inline-block;
+}
+.Logo {
+  font-family: 'Orbitron';
+  text-align: center;
+  font-size: 65px;
+}
