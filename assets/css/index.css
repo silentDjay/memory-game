@@ -68,9 +68,10 @@ a {
 /*styling for the div containing individual cards*/
 
 .cardDiv {
-  display: inline-block;
+  /*position: relative;*/
+  display: inline;
   text-align: center;
-  line-height: 155px;
+  /*line-height: 155px;*/
   color: transparent;
 }
 
@@ -102,8 +103,10 @@ input:checked +.card {
 /*Styling for the middle rows of cards*/
 
 .cardRow {
+  margin-top: .2em;
   margin-left:2.3em;
   margin-right:2.3em;
+  margin-bottom: .2em;
 }
 
 /*Styling for the bottom row of cards*/
