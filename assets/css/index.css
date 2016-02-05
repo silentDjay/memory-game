@@ -1,6 +1,6 @@
-*{
+/**{
   border-style: solid;
-}
+}*/
 
 body{
   /*background-color: #3f51b5;*/
@@ -32,15 +32,23 @@ a {
 
 /*Styling for box containing hearts and time*/
 
-h2 {
+.heartTime {
   margin-top: 2em;
 }
-.time {
-  margin-left: 50em;
-  font-family: Arial, sans-serif;
-}
+
 .hearts {
   display: inline-block;
+  /*width: 10%;*/
+}
+
+.time {
+  float: right;
+  /*margin-left: 45em;*/
+  /*display: inline block;*/
+  /*width: 10%;*/
+  /*margin-left: 50em;*/
+  font-family: Arial, sans-serif;
+  text-align: right;
 }
 
 /*Styling for each individual card*/
@@ -51,8 +59,10 @@ h2 {
   border-radius: .5em;
   background: #7986cb;
   display: inline-block;
-  transition: background 1s,
-  -webkit-transform 1s;
+  transition: background .5s,
+  -webkit-transform .5s;
+  transition: color .5s,
+  -webkit-transform .5s;
 }
 
 /*styling for the div containing individual cards*/
@@ -61,6 +71,7 @@ h2 {
   display: inline-block;
   text-align: center;
   line-height: 155px;
+  color: transparent;
 }
 
 /*Styling for the checkb1ox that covers the card*/
@@ -73,19 +84,32 @@ input {
 /*Style for when the checkbox (card) is checked*/
 input:checked +.card {
   -webkit-transform: rotateY(180deg);
+  color: black;
 }
 
-/*Styling for the first row of cards*/
+/*input:checked +.cardDiv {
+  color: black;
+}*/
+
+/*Styling for the top row of cards*/
 
 .topCardRow {
   margin-left:2.3em;
-  margin-left:2.3em;
+  margin-right:2.3em;
   margin-top:2.3em;
 }
 
-/*Styling for the other rows of cards*/
+/*Styling for the middle rows of cards*/
 
 .cardRow {
   margin-left:2.3em;
+  margin-right:2.3em;
+}
+
+/*Styling for the bottom row of cards*/
+
+.bottomCardRow {
   margin-left:2.3em;
+  margin-right:2.3em;
+  margin-bottom:2.3em;
 }
