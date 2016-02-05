@@ -34,7 +34,6 @@ a {
 
 .hearts {
   display: inline-block;
-  /*width: 10%;*/
 }
 
 .time {
@@ -51,9 +50,7 @@ a {
   border-radius: .5em;
   background: #7986cb;
   display: inline-block;
-  transition: background .5s,
-  -webkit-transform .5s;
-  transition: color .5s,
+  transition: background .5s, color .5s,
   -webkit-transform .5s;
 }
 
@@ -73,8 +70,6 @@ a {
 
 /*Styling for the checkb1ox that covers the card*/
 input {
-  width: 155px;
-  height: 155px;
   display: none;
 }
 
