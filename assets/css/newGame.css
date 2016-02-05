@@ -1,25 +1,29 @@
-*{
-  border-style: solid;
-}
-.newGameLogo{
-  font-family: 'Orbitron';
-}
 body {
   background-color: #348b9e;
   color: white;
 }
+
+/*Styling for logo*/
+
 .newGameLogo {
+  font-family: 'Orbitron';
   text-align: center;
   margin-top: 2.5em;
   margin-bottom: .5em;
   font-size: 25px;
 }
+
+/*Styling for 'NEW GAME'*/
+
 h2 {
   font-family: Arial, sans-serif;
   font-size: 12px;
   text-align: center;
   margin-bottom: 1em;
 }
+
+/*Styling for Easy/Hard buttons*/
+
 h3 {
   font-size: 6px;
   font-family: Arial,sans-serif;
@@ -34,7 +38,17 @@ h3 {
   padding-top: .7em;
   padding-bottom: .7em;
 }
+
+/*Styling for hover over easy/hard buttons*/
+
 h3:hover {
   background-color: white;
   color: black;
+}
+
+/*Styling for link covering easy/hard buttons*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }

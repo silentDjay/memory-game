@@ -29,7 +29,7 @@ h2 {
   font-size: 65px;
 }
 
-/*Styling for each individual card*/
+/*Styling for the label on each individual card*/
 
 .card {
   width: 155px;
@@ -41,10 +41,16 @@ h2 {
   -webkit-transform 1s;
 }
 
+/*styling for the div containing individual cards*/
+
+.cardDiv {
+  display: inline-block;
+}
+
 /*Styling for the checkb1ox that covers the card*/
 input {
-  width: 120px;
-  height: 120px;
+  width: 155px;
+  height: 155px;
   display: none;
 }
 
