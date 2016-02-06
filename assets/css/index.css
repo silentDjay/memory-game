@@ -70,7 +70,7 @@ a {
   border-radius: .5em;
   background: #7986cb;
   display: inline-block;
-  transition: background .5s, color .5s,
+  transition: background .5s, color .4s,
   -webkit-transform .5s;
 }
 
@@ -96,6 +96,5 @@ input {
 /*Style for when the checkbox (card) is checked*/
 input:checked +.card {
   -webkit-transform: rotateY(180deg);
-  /*-webkit-transform: rotateZ(720deg);*/
   color: white;
 }
