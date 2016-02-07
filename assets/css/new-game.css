@@ -8,16 +8,16 @@ body {
 .newGameLogo {
   font-family: 'Orbitron';
   text-align: center;
-  margin-top: 2.5em;
-  margin-bottom: .5em;
-  font-size: 26px;
+  margin-top: 2.4em;
+  margin-bottom: .3em;
+  font-size: 4em;
 }
 
 /*Styling for 'NEW GAME'*/
 
 h2 {
   font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-size: 2em;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -25,29 +25,27 @@ h2 {
 /*Styling for Easy/Hard buttons*/
 
 h3 {
-  font-size: 7px;
+  font-size: 1em;
   font-family: Arial,sans-serif;
   width: 30%;
   margin-left:35%;
   text-align: center;
   border-style: solid;
   border-color: white;
-  border-width: 1.8px;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  border-width: 4px;
+  margin-bottom: 1.2em;
+  margin-top: 1.2em;
   padding-top: .7em;
   padding-bottom: .7em;
 }
 
 /*Styling for perspective on buttons*/
 .easyButton {
-  /*webkit-transform: perspective(100px) rotateY(-45deg);*/
-  transform: perspective(175px) rotateY(-35deg);
+  transform: perspective(200px) rotateY(-15deg);
 }
 
 .hardButton {
-  /*webkit-transform: perspective(200px) rotateY(45deg);*/
-  transform: perspective(175px) rotateY(35deg);
+  transform: perspective(200px) rotateY(15deg);
 }
 
 /*Styling for hover over easy/hard buttons*/

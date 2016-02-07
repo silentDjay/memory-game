@@ -6,10 +6,10 @@ body{
 /*Styling of header and all elements therewithin*/
 
 header {
-  margin-top: 3.2em;
+  margin-top: 2.6em;
   width: 94%;
   margin-left: 3%;
-  margin-bottom:3.4em;
+  margin-bottom:3.6em;
 }
 
 /*Styling for logo*/
@@ -17,7 +17,7 @@ header {
 .Logo {
   font-family: 'Orbitron';
   text-align: center;
-  font-size: 60px;
+  font-size: 4em;
 }
 
 /*Styling for link overlaying logo*/
@@ -30,7 +30,7 @@ a {
 /*Styling for box containing hearts and time*/
 
 .heartTime {
-  margin-top: .6em;
+  margin-top: .7em;
 }
 
 .hearts {
@@ -63,8 +63,8 @@ a {
 /*Styling for each individual card*/
 
 .card {
-  width: 155px;
-  height: 155px;
+  width: 116px;
+  height: 116px;
   margin-bottom:2px;
   margin-right:-2px;
   border-radius: .5em;
@@ -85,10 +85,10 @@ a {
 /*Styling for the icons themselves*/
 
 .fa-2x {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
-/*Styling for the checkb1ox that covers the card*/
+/*Styling for the checkbox that covers the card*/
 input {
   display: none;
 }
