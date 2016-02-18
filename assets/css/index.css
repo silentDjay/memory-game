@@ -88,13 +88,13 @@ a {
   padding-top: 60px;
 }
 
-/*Styling for the checkb1ox that covers the card*/
+/*Styling for the checkbox that covers the card*/
 input {
   display: none;
 }
 
-/*Style for when the checkbox (card) is checked*/
-input:checked +.card {
+/*Style for when the checkbox (card) is clicked*/
+.clickedCard {
   -webkit-transform: rotateY(180deg);
   color: white;
 }
