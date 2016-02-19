@@ -17,16 +17,21 @@ $(document).ready( function () {
       console.log("flippedIcons is " + flippedIcons);
       console.log("flippedCards is " + flippedCards);
 
-      // IF flippedIcons[].length === 2
-          //IF flippedCards[0] === flippedCards[1]
-            // 1. hooray! match!. uhh.
-            // 2. empty arrays flippedCards AND flippedIcons
-          // ELSE
-            // 1. removeClass class cardFlip from everything in flippedCards[]
-            // 2. empty arrays flippedCards AND flippedIcons
-      // ELSE - (if flippedCards[].length < 2) IT SHOULD ONLY BE SHORTER THAN 2!!!!!
-        // return false (you need another card to be clicked)
-
+      if (flippedIcons.length === 2){// IF flippedIcons[].length === 2
+        if (flippedIcons[0] === flippedIcons [1]) {//do the icons on the flipped cards match?
+          console.log("match");// hooray! match!. uhh.
+          flippedCards = [];// empty array flippedCards
+          flippedIcons = [];// empty array flippedIcons
+        } else {// ELSE
+          console.log("not a match");
+          // 1. removeClass class cardFlip from everything in flippedCards[]
+          // 2. turn a full heart to an empty heart (or just remove a heart)
+          flippedCards = [];// empty array flippedCards
+          flippedIcons = [];// empty array flippedIcons
+        }
+      } else {// ELSE - (if flippedCards[].length < 2) IT SHOULD ONLY BE SHORTER THAN 2!!!!!
+        return false; // return false (you need another card to be clicked)
+      }
     } // } END ELSE CASE FROM THE TOP!!!
   });
 
