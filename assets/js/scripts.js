@@ -24,10 +24,13 @@ $(document).ready( function () {
           flippedIcons = [];// empty array flippedIcons
         } else {// ELSE
           console.log("not a match");
-          // 1. removeClass class cardFlip from everything in flippedCards[]
-          // 2. turn a full heart to an empty heart (or just remove a heart)
-          flippedCards = [];// empty array flippedCards
-          flippedIcons = [];// empty array flippedIcons
+          setTimeout(function() { //delay what's inside this thing
+            $(flippedCards[0]).removeClass("cardFlip");//removes cardFlip class
+            $(flippedCards[1]).removeClass("cardFlip");//from both .card (s)
+            // 2. turn a full heart to an empty heart (or just remove a heart)
+            flippedCards = [];// empty array flippedCards
+            flippedIcons = [];// empty array flippedIcons
+          }, 500); // by 1 second
         }
       } else {// ELSE - (if flippedCards[].length < 2) IT SHOULD ONLY BE SHORTER THAN 2!!!!!
         return false; // return false (you need another card to be clicked)
