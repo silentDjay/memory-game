@@ -60,6 +60,12 @@ a {
   margin-bottom:2em;
 }
 
+/*styling for the div containing individual cards*/
+
+/*.cardDiv {
+  display: inline-block;
+}*/
+
 /*Styling for each individual card*/
 
 .card {
@@ -70,31 +76,20 @@ a {
   border-radius: .5em;
   background: #7986cb;
   display: inline-block;
-  transition: background .5s, color .4s,
-  -webkit-transform .5s;
-}
-
-/*styling for the div containing individual cards*/
-
-.cardDiv {
-  display: inline;
   text-align: center;
   color: transparent;
+  transition: color .4s, -webkit-transform .5s;
+}
+
+/*Style for when the checkbox (card) is clicked*/
+.cardFlip {
+  -webkit-transform: rotateY(180deg);
+  color: white;
 }
 
 /*Styling for the icons themselves*/
 
 .fa-2x {
   padding-top: 60px;
-}
-
-/*Styling for the checkbox that covers the card*/
-input {
-  display: none;
-}
-
-/*Style for when the checkbox (card) is clicked*/
-.clickedCard {
-  -webkit-transform: rotateY(180deg);
-  color: white;
+  /*color: inherit;*/
 }

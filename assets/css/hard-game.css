@@ -74,6 +74,12 @@ a {
   -webkit-transform .5s;
 }
 
+/*Style for when the checkbox (card) is checked*/
+input:checked +.card {
+  -webkit-transform: rotateY(180deg);
+  color: white;
+}
+
 /*styling for the div containing individual cards*/
 
 .cardDiv {
@@ -91,10 +97,4 @@ a {
 /*Styling for the checkbox that covers the card*/
 input {
   display: none;
-}
-
-/*Style for when the checkbox (card) is checked*/
-input:checked +.card {
-  -webkit-transform: rotateY(180deg);
-  color: white;
 }
