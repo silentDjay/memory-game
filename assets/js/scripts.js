@@ -8,10 +8,14 @@ $(document).ready( function () {
   var flippedCards = [];//this is the array which will contain no more than the last two flipped cards $(this)
 
   $(".card").on("click", function () { // when any card is clicked...
-    // IF the card already has class CardFlip
-      //return false (don't do shit)
-    // ELSE {
-      $(this).addClass("cardFlip"); //<<flip the card AND 1. add THIS card's icon's class to flippedCards[] 2. add THIS to flippedCards[]
+    if ($(this).attr("class").includes("cardFlip")) {// IF the card already has class CardFlip
+      return false; //don't do shit
+    } else {// ELSE {
+      $(this).addClass("cardFlip"); //1. flip the card
+      flippedIcons.push($(this).children().attr("class"));//2. add THIS card's icon's class to flippedIcons[]
+      flippedCards.push($(this));//3. add THIS to flippedCards[]
+      console.log("flippedIcons is " + flippedIcons);
+      console.log("flippedCards is " + flippedCards);
 
       // IF flippedIcons[].length === 2
           //IF flippedCards[0] === flippedCards[1]
@@ -23,7 +27,7 @@ $(document).ready( function () {
       // ELSE - (if flippedCards[].length < 2) IT SHOULD ONLY BE SHORTER THAN 2!!!!!
         // return false (you need another card to be clicked)
 
-    // } END ELSE CASE FROM THE TOP!!!
+    } // } END ELSE CASE FROM THE TOP!!!
   });
 
 
