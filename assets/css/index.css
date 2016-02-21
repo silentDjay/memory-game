@@ -34,6 +34,7 @@ a {
 }
 
 .hearts {
+  font-family: Arial, sans-serif;
   display: inline-block;
   font-size: 12px;
 }

@@ -26,7 +26,7 @@ $(document).ready( function () {
 
     seconds = clockNums(total_seconds);//pad single digit second counts with a zero (see above)
 
-    var currentTime = minutes + "'" + seconds + "\""; // display time like this: [minutes]'[seconds]"
+    var currentTime = minutes + "' " + seconds + "\""; // display time like this: [minutes]'[seconds]"
 
     return currentTime; // the end product of the elapsedTime function
   }
@@ -36,7 +36,7 @@ $(document).ready( function () {
   setTimeout(function() { //delay the game timer starting
     setInterval(function() {
       elapsed_seconds = elapsed_seconds + 1;//add 1 to elapsed_seconds
-      $('.gameClock').text("Game clock: " + elapsedTime(elapsed_seconds));
+      $('.gameClock').text("You've been playing this long: " + elapsedTime(elapsed_seconds));
     }, 1000);//every second
   }, 11000);// by 11 seconds
 
@@ -60,7 +60,12 @@ $(document).ready( function () {
           setTimeout(function() { //delay what's inside this thing
             $(flippedCards[0]).removeClass("cardFlip");//removes cardFlip class
             $(flippedCards[1]).removeClass("cardFlip");//from both .card (s)
-            // 2. turn a full heart to an empty heart (or just remove a heart)
+            $(".hearts").children().last().remove();// remove a heart
+            if ($(".hearts").children().length > 0){
+              //do nothing
+            } else {
+              $('.hearts').text("Sorry, human. You are a loser.");//announce a lost game
+            }
             flippedCards = [];// empty array flippedCards
             flippedIcons = [];// empty array flippedIcons
           }, 500); // by 1 second
