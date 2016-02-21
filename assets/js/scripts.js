@@ -1,18 +1,44 @@
 $(document).ready( function () {
   "use strict";
 
-// see this link for clock information: http://stackoverflow.com/questions/2604450/how-to-create-a-jquery-clock-timer
-  var start = new Date;
+// I got almost all of my clock information from here: http://stackoverflow.com/questions/2604450/how-to-create-a-jquery-clock-timer
 
-    // setInterval(function() {
-    //   $(".time").text("Your game starts in "(new Date + start) / 1000 " seconds.");
-    // }, 1000);
+  var secondsUntilGame = 11;
 
-    setTimeout(function() { //delay the timer starting
-      setInterval(function() {
-        $(".time").text(Math.round((((new Date - start)) / 1000) - 9) + " Seconds");
-      }, 1000);
-    }, 9000); // by 10 seconds
+  var countdownID = setInterval(function() {
+    secondsUntilGame = secondsUntilGame - 1;//subtract one from the variable
+    $('.gameClock').text("Your game starts in " + secondsUntilGame + "...");
+    console.log(secondsUntilGame);
+    if (secondsUntilGame < 1){// once secondsUntilGame reaches zero...
+      clearInterval(countdownID);//stop the countdown
+    }
+  }, 1000);//this happens every second until it doesn't happen anymore
+
+  function elapsedTime(total_seconds) {
+    function clockNums(num) {
+      return ( num < 10 ? "0" : "" ) + num; // if num is a single digit, add a zero in front of it
+    }
+
+    var seconds = Math.floor(total_seconds);// round the seconds down to integers
+
+    var minutes = Math.floor(total_seconds / 60); // add a minute every 60 seconds
+    total_seconds = total_seconds % 60;//make sure seconds count resets at 60
+
+    seconds = clockNums(total_seconds);//pad single digit second counts with a zero (see above)
+
+    var currentTime = minutes + "'" + seconds + "\""; // display time like this: [minutes]'[seconds]"
+
+    return currentTime; // the end product of the elapsedTime function
+  }
+
+  var elapsed_seconds = 0;//start the clock at zero seconds
+
+  setTimeout(function() { //delay the game timer starting
+    setInterval(function() {
+      elapsed_seconds = elapsed_seconds + 1;//add 1 to elapsed_seconds
+      $('.gameClock').text("Game clock: " + elapsedTime(elapsed_seconds));
+    }, 1000);//every second
+  }, 11000);// by 11 seconds
 
   var flippedIcons = [];//this is the array which will contain flipped card's icon's classes ($(this).children().getClass() or something like that)
   var flippedCards = [];//this is the array which will contain no more than the last two flipped cards $(this)
